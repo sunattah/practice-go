@@ -7,12 +7,12 @@ subtotal = price * quantity
 
 # 2. Apply discount if discount_code is True
 if discount_code == True:
-    total = subtotal - (subtotal * price - quantity)   # subtract 10% off
+    total = subtotal - (subtotal * 0.1)   # subtract 10% off
 else:
-    total = 19
+    total = subtotal
 
 # 3. Check if total qualifies for free shipping (over 50)
-qualifies_for_free_shipping = total >= 50
+qualifies_for_free_shipping = total > 50
 
 # 4. Check if quantity is even or odd using modulo
 if quantity % 2 == 0:
